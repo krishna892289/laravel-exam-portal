@@ -1,0 +1,652 @@
+[
+    {
+        "category_id": 2,
+        "title": "What does PHP stand for?",
+        "description": "A basic question about the acronym of the language.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "Hypertext Preprocessor",
+            "Personal Home Page",
+            "Private Hosting Platform",
+            "Public HTML Page"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Laravel is based on which pattern?",
+        "description": "Architectural pattern question.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "MVVM",
+            "MVC",
+            "Singleton",
+            "Factory"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Which tag is used for line breaks?",
+        "description": "HTML basic formatting question.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "<lb>",
+            "<break>",
+            "<br>",
+            "<newline>"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "What is the default port for HTTP?",
+        "description": "Networking basics.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "80",
+            "443",
+            "8080",
+            "21"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Which symbol starts a variable in PHP?",
+        "description": "Syntax question.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "@",
+            "#",
+            "%",
+            "$"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "CSS stands for?",
+        "description": "Definition of CSS.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "Computer Style Sheets",
+            "Cascading Style Sheets",
+            "Creative Style Sheets",
+            "Colorful Style Sheets"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Command to start Laravel server?",
+        "description": "Artisan command knowledge.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "php artisan serve",
+            "php artisan start",
+            "laravel run",
+            "php server start"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "Which is not a loop structure?",
+        "description": "Programming logic.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "For",
+            "While",
+            "If",
+            "Do While"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Output of echo 10 + '10' in PHP?",
+        "description": "Type juggling question.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "20",
+            "1010",
+            "Error",
+            "10"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Which bracket refers to an array?",
+        "description": "Syntax basics.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "{}",
+            "[]",
+            "()",
+            "<>"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Where are routes defined in Laravel?",
+        "description": "Framework structure.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "app/Http",
+            "resources/views",
+            "database/migrations",
+            "routes/web.php"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "SQL command to fetch data?",
+        "description": "Database query language.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "SELECT",
+            "GET",
+            "FETCH",
+            "PULL"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Function to get string length in PHP?",
+        "description": "String manipulation.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "count()",
+            "strlen()",
+            "length()",
+            "size()"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Which is a JavaScript Framework?",
+        "description": "Frontend technologies.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "Laravel",
+            "Django",
+            "Vue.js",
+            "Flask"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "What is Blade in Laravel?",
+        "description": "Templating engine.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "Templating Engine",
+            "Database Driver",
+            "Security Protocol",
+            "Caching System"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "Primary Key must be...",
+        "description": "Database design theory.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "Null",
+            "Duplicate",
+            "Text",
+            "Unique"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "How to include a file in PHP?",
+        "description": "File handling.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "import",
+            "include",
+            "use",
+            "fetch"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Correct HTML for largest heading?",
+        "description": "HTML structure.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "<h1>",
+            "<h6>",
+            "<head>",
+            "<heading>"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "What is Eloquent?",
+        "description": "Laravel ORM.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "Routing System",
+            "Middleware",
+            "ORM",
+            "Controller"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "Git command to download repo?",
+        "description": "Version control.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "git pull",
+            "git clone",
+            "git push",
+            "git commit"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Which version is PHP currently in?",
+        "description": "General knowledge (approx).",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "5.x",
+            "6.x",
+            "7.x",
+            "8.x"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Color code for White?",
+        "description": "CSS hex codes.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "#FFFFFF",
+            "#000000",
+            "#FF0000",
+            "#00FF00"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "File extension for Laravel views?",
+        "description": "File naming conventions.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            ".php",
+            ".blade.php",
+            ".html",
+            ".vue"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "Standard port for HTTPS?",
+        "description": "Networking security.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "80",
+            "22",
+            "443",
+            "3306"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "PHP function to merge arrays?",
+        "description": "Array manipulation.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "array_merge",
+            "array_combine",
+            "array_join",
+            "array_mix"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "HTML attribute for image URL?",
+        "description": "HTML attributes.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "href",
+            "link",
+            "url",
+            "src"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Laravel directory for images?",
+        "description": "Folder structure.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "storage",
+            "public",
+            "resources",
+            "assets"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "JSON stands for?",
+        "description": "Data format definitions.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "JavaScript Object Notation",
+            "Java Source Object Network",
+            "JavaScript On Node",
+            "Java Standard Output"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Is PHP case sensitive for variables?",
+        "description": "Language rules.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "Yes",
+            "No",
+            "Only in Classes",
+            "Only for Arrays"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Which property changes text color?",
+        "description": "CSS properties.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "font-color",
+            "text-style",
+            "color",
+            "background"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Laravel command to create migration?",
+        "description": "Artisan commands.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "make:db",
+            "make:migration",
+            "create:table",
+            "new:migration"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "Status code for 'Not Found'?",
+        "description": "HTTP Protocols.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "404",
+            "200",
+            "500",
+            "301"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Operator for strict comparison?",
+        "description": "Operators in PHP.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "=",
+            "==",
+            "!=",
+            "==="
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Bootstrap is a framework for?",
+        "description": "Library knowledge.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "Backend",
+            "CSS/Design",
+            "Database",
+            "Testing"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Which middleware handles Auth?",
+        "description": "Laravel Security.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "auth",
+            "guest",
+            "web",
+            "api"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "What represents 'All' in SQL?",
+        "description": "Database Wildcards.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "%",
+            "&",
+            "*",
+            "ALL"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Function to check if variable is set?",
+        "description": "Validation functions.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "empty()",
+            "isset()",
+            "is_null()",
+            "check()"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Which tag defines an ordered list?",
+        "description": "HTML Lists.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "<ol>",
+            "<ul>",
+            "<li>",
+            "<dl>"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Composer is used for?",
+        "description": "Dependency Management.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "Database",
+            "Frontend",
+            "Server",
+            "Dependency Management"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "API stands for?",
+        "description": "Acronyms.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "Application Programming Interface",
+            "Applied Protocol Interaction",
+            "Automated Program Interface",
+            "Application Page Input"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Superglobal for form data (POST)?",
+        "description": "Global Variables.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "$_GET",
+            "$_POST",
+            "$_SERVER",
+            "$_REQUEST"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Property to bold text in CSS?",
+        "description": "Styling text.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "text-decoration",
+            "font-style",
+            "font-weight",
+            "text-transform"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Default database used by Laravel?",
+        "description": "Configuration.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "MySQL",
+            "PostgreSQL",
+            "SQLite",
+            "MongoDB"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "Which is a NoSQL database?",
+        "description": "Database types.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "MySQL",
+            "Oracle",
+            "MariaDB",
+            "MongoDB"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Keyword to define a constant?",
+        "description": "Syntax.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "var",
+            "const",
+            "let",
+            "fixed"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Tag to insert JavaScript?",
+        "description": "HTML Integration.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "<script>",
+            "<js>",
+            "<code>",
+            "<style>"
+        ]
+    },
+    {
+        "category_id": 3,
+        "title": "Which function dumps and dies?",
+        "description": "Debugging in Laravel.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 2,
+        "answer": [
+            "dump()",
+            "die()",
+            "dd()",
+            "stop()"
+        ]
+    },
+    {
+        "category_id": 4,
+        "title": "DNS translates URL to?",
+        "description": "Networking.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 1,
+        "answer": [
+            "MAC Address",
+            "IP Address",
+            "HTML Code",
+            "Binary Code"
+        ]
+    },
+    {
+        "category_id": 2,
+        "title": "Which is not a scalar type in PHP?",
+        "description": "Data types.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 3,
+        "answer": [
+            "int",
+            "float",
+            "string",
+            "array"
+        ]
+    },
+    {
+        "category_id": 5,
+        "title": "Which unit is responsive in CSS?",
+        "description": "CSS Units.",
+        "image": "1763814556_Gemini_Generated_Image_qnur3sqnur3sqnur.png",
+        "answers": 0,
+        "answer": [
+            "vw",
+            "px",
+            "pt",
+            "cm"
+        ]
+    }
+]

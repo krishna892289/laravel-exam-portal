@@ -13,13 +13,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('take_answers', function (Blueprint $table) {
-            // 1. ADD the column first. Make it nullable to avoid conflicts
-            //    with existing rows that don't have a value yet.
             $table->unsignedBigInteger('test_id')->nullable()->after('id');
         });
-
-        // 2. CLEAN UP the invalid data (now the column exists)
-        //    We must also check for NULL values if we plan to make it NOT NULL later.
         DB::statement("
             DELETE FROM take_answers
             WHERE test_id IS NOT NULL
@@ -27,14 +22,11 @@ return new class extends Migration
         ");
 
         Schema::table('take_answers', function (Blueprint $table) {
-            // 3. ADD the Foreign Key constraint
             $table->foreign('test_id')
                   ->on('assigned_tests')
                   ->references('id')
-                  ->cascadeOnDelete();
-
-            // OPTIONAL: If test_id must be required, change it to NOT NULL now.
-            // $table->unsignedBigInteger('test_id')->nullable(false)->change();
+                  ->cascadeOnDelete()
+                  ->onUpdate('cascade');
         });
     }
 

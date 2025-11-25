@@ -7,20 +7,15 @@
                     @csrf
                     <label for="titleinput" class="form-label">Enter Title</label>
                     <input type="text" id="titleinput" name="title" class="form-control" placeholder="Enter Test Title">
-                    <label for="inputquestions" class="form-label">Select Questions</label>
-                    @forelse ($questions as $question)
-                        <div class="form-check">
-                            <input class="form-check-input" name="questions[]" type="checkbox"
-                                id="inputquestions{{ $question->id }}" value="{{ $question->id }}">
-                            <label class="form-check-label" for="gridCheck">
-                                {{ $question->title }}
-                                <span class="text-secondary">({{ $question->category->category_name }})</span>
-                            </label>
 
-                        </div>
-                    @empty
-                        No questions found
-                    @endforelse
+                    <label for="category" class="form-label">Choose Question category</label>
+                    <select name="category" id="category" class="form-control" onchange="view_questions(this.value)">
+                        <option value="">--Please Select--</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->category_name }}</option>
+                        @endforeach
+                    </select>
+                    <div class="questions"></div>
             </div>
             <div class="col-md-8">
                 <label for="inputstudents" class="form-label">Select Student</label>

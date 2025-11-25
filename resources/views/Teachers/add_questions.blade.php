@@ -36,10 +36,10 @@
             <fieldset class="row mb-3">
                 <legend class="col-form-label col-sm-2 pt-0">Answers</legend>
                 <div class="col-sm-10">
+
                     <div class="form-check">
                         <input type="text" placeholder="answer 1" name="answer[1]">
                         <input class="form-check-input" type="radio" name="answers" value="1">
-
                     </div>
                     <div class="form-check">
                         <input type="text" placeholder="answer 2" name="answer[2]">
@@ -61,4 +61,17 @@
             <button type="submit" class="btn btn-primary">Add Question</button>
         </form>
     </div>
+    <script>
+        // var i = 0;
+
+        // function add_answers() {
+
+
+        //     $('#answersappend').append(`<div class="form-check">
+    //                 <input type="text" placeholder="answer " name="answer[]">
+    //                 <input class="form-check-input" type="radio" name="answers" value="${i}">
+    //             </div>`);
+        //     ++i;
+        // }
+    </script>
 @endsection

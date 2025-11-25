@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Answer;
 use App\Models\AssignedTest;
+use App\Models\Result;
 use App\Models\TakeAnswer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -15,7 +16,8 @@ use function PHPUnit\Framework\isEmpty;
 class HomeController extends Controller
 {
     public function home(){
-        return view('welcome');
+
+        return view('welcome')->with('names');
     }
 
     public function dashboards(){
@@ -75,7 +77,6 @@ class HomeController extends Controller
 
             $correct = 0;
             $question_attempted = 0;
-
             foreach($my_answers as $my_answer){
                 if(!$my_answer->answer_id == NULL){
                    $answer = Answer::where('id', $my_answer->answer_id)->first();
@@ -86,13 +87,29 @@ class HomeController extends Controller
                 }
             }
 
+            $score = ($correct / $total_questions) * 100;
+
+            Result::create([
+                'test_id' =>$request->test_id,
+                'user_id' => Auth::user()->id,
+                'score' => $score,
+                'total_correct' => $correct,
+                'question_attempted' =>$question_attempted,
+                'total_questions' => $total_questions
+            ]);
+
             // dd($correct);
-            return view('students.result', compact('total_questions', 'question_attempted', 'correct'));
+            return redirect()->route('results')->with('success', 'test submitted successfully');
     }
 
-
-
-
+    }
+    public function results(){
+        if(Auth::user()->role == '2'){
+            $results =  Result::where('user_id', Auth::user()->id)->get();
+        }else{
+            $results = Result::all();
+        }
+        return view('students.results', compact('results'));
     }
 
 }

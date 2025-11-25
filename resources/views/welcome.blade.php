@@ -1,6 +1,14 @@
 @extends('layout')
 @section('hero')
-    <div class="container mt-3" style="width:60vw">
+    @push('style')
+        <style>
+            #logindiv {
+                width: 60vw;
+            }
+        </style>
+    @endpush
+
+    <div class="container mt-3" id="logindiv">
         <form method="post" action="{{ route('login') }}">
             @csrf
             <div class="mb-3">
@@ -15,4 +23,11 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+    {{-- @foreach ($names as $name => $value)
+        {{ $value }}
+        <pre>
+            {{ print_r($value['name']) }}
+        </pre>
+    @endforeach --}}
 @endsection

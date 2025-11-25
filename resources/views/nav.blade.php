@@ -45,7 +45,25 @@
                                 <li><a class="dropdown-item" href="{{ route('view_categories') }}">View Category</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Results
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('results') }}">All Results</a></li>
+                            </ul>
+                        </li>
                     @elseif (auth()->user()->role == '2')
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Results
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('results') }}">All Results</a></li>
+                            </ul>
+                        </li>
                     @endif
                 @endauth
                 @guest

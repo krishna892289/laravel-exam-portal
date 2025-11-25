@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
+    @stack('style')
+
+
 </head>
 
 <body style="background-image: url({{ asset('logo.png') }}); background-size: cover; background-repeat: no-repeat;">
@@ -22,7 +25,8 @@
     @else
         No Hero
     @endif
-
+    @stack('script')
+    @include('scripts')
 </body>
 
 </html>
