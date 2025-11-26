@@ -31,9 +31,12 @@ class TeacherController extends Controller
         return view('Teachers.add_questions', compact('time', 'categories'));
     }
 
-    public function view_questions(){
+    public function view_questions(Request $request){
         $categories = Category::all();
         $questions = Question::with('answers')->paginate(4);
+        if($request->ajax()){
+            return view('teachers.data', compact('questions', 'categories'));
+        }
         return view('teachers.view_questions', compact('questions', 'categories'));
     }
 

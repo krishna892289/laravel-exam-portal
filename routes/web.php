@@ -13,6 +13,7 @@ Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/registration_submit', [AuthController::class, 'registration_submit'])->name('registration_submit');
 
+
 Route::middleware(checkloggedin::class)->group(function(){
     Route::get('/dashboards', [HomeController::class, 'dashboards'])->name('dashboards');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -42,3 +43,8 @@ Route::middleware(checkloggedin::class)->group(function(){
 
 });
 });
+
+
+Route::fallback(function () {
+       return view('error404');
+   });

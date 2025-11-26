@@ -1,6 +1,6 @@
 @extends('layout')
 @section('hero')
-    <div class="container mt-3 ">
+    <div class="container mt-3 " id="table_data">
         <table class="table table-responsive" style="--bs-table-bg: transparent;">
             <tr>
                 <th>Category</th>
@@ -39,139 +39,165 @@
                     </td>
                 </tr>
 
-                <div class="modal fade" id="edit_question_modal{{ $question->id }}" tabindex="-1"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Alter Questions</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form method="POST" enctype="multipart/form-data"
-                                    action="{{ route('edit_submit_question') }}">
-                                    <input type="hidden" name="question_id" value="{{ $question->id }}">
-                                    @csrf
-                                    <div class="row mb-3">
-                                        <label for="selectcategory" class="col-sm-3 col-form-label">Change Category</label>
-                                        <div class="col-sm-9">
-                                            <select name="category_id" class="form-control-sm">
-                                                <option selected>--Please select=-</option>
-                                                @foreach ($categories as $category)
-                                                    @if ($category->id == $question->category_id)
-                                                        <option value="{{ $category->id }}" selected>
-                                                            {{ $category->category_name }}
-                                                        </option>
-                                                    @else
-                                                        <option value="{{ $category->id }}">{{ $category->category_name }}
-                                                        </option>
-                                                    @endif
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <label for="inputquestiontitle3" class="col-sm-3 col-form-label">Change
-                                            Title</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" name="title" class="form-control"
-                                                id="inputquestiontitle3" value="{{ $question->title }}" />
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <label for="inputimage3" class="col-sm-3 col-form-label">Change Image:</label>
-                                        <div class="col-sm-9">
-                                            <img src="{{ asset('questions12/images') . '/' . $question->image }}"
-                                                class="img-thumbnail" style="width: 100px;height:100px">
-                                            <input type="file" accept="image/*" name="image" class="form-control"
-                                                id="inputimage3" />
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <label for="inputDescription3" class="col-sm-3 col-form-label"> Change
-                                            Description</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" name="description" class="form-control"
-                                                id="inputDescription3" value="{{ $question->description }}">
-                                        </div>
-                                    </div>
-                                    <fieldset class="row mb-3">
 
-                                        <legend class="col-form-label col-sm-3 pt-0">Answers</legend>
-                                        <div class="col-sm-9">
-                                            @php
-                                                $i = 1;
-                                            @endphp
-                                            @forelse ($question->answers as $answer)
-                                                @if ($answer->question_id == $question->id)
-                                                    @if ($answer->correct == '1')
-                                                        <div class="form-check">
-                                                            <input type="text" placeholder="answer []"
-                                                                name="answer[{{ $i }}]"
-                                                                value=" {{ $answer->answer }}">
-                                                            <input class="form-check-input" type="radio" name="answers"
-                                                                checked value="{{ $i }}">
-                                                        </div>
-                                                    @else
-                                                        <div class="form-check">
-                                                            <input type="text" placeholder="answer"
-                                                                name="answer[{{ $i }}]"
-                                                                value=" {{ $answer->answer }}">
-                                                            <input class="form-check-input" type="radio" name="answers"
-                                                                value="{{ $i }}">
-                                                        </div>
-                                                    @endif
-                                                @endif
-                                                @php
-                                                    ++$i;
-                                                @endphp
-                                            @empty
-                                                <fieldset class="row mb-3">
-                                                    <div class="col-sm-10">
-                                                        <div class="form-check">
-                                                            <input type="text" placeholder="answer 1" name="answer[1]">
-                                                            <input class="form-check-input" type="radio" name="answers"
-                                                                value="1">
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input type="text" placeholder="answer 2"
-                                                                name="answer[2]">
-                                                            <input class="form-check-input" type="radio" name="answers"
-                                                                value="2">
-
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input type="text" placeholder="answer 3"
-                                                                name="answer[3]">
-                                                            <input class="form-check-input" type="radio" name="answers"
-                                                                value="3">
-
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input type="text" placeholder="answer 4"
-                                                                name="answer[4]">
-                                                            <input class="form-check-input" type="radio" name="answers"
-                                                                value="4">
-
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            @endforelse
-                                        </div>
-                                    </fieldset>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             @empty
             @endforelse
         </table>
         {{ $questions->links() }}
+
+        @foreach ($questions as $question)
+            <div class="modal fade" id="edit_question_modal{{ $question->id }}" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Alter Questions</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" enctype="multipart/form-data"
+                                action="{{ route('edit_submit_question') }}">
+                                <input type="hidden" name="question_id" value="{{ $question->id }}">
+                                @csrf
+                                <div class="row mb-3">
+                                    <label for="selectcategory" class="col-sm-3 col-form-label">Change Category</label>
+                                    <div class="col-sm-9">
+                                        <select name="category_id" class="form-control-sm">
+                                            <option selected>--Please select=-</option>
+                                            @foreach ($categories as $category)
+                                                @if ($category->id == $question->category_id)
+                                                    <option value="{{ $category->id }}" selected>
+                                                        {{ $category->category_name }}
+                                                    </option>
+                                                @else
+                                                    <option value="{{ $category->id }}">{{ $category->category_name }}
+                                                    </option>
+                                                @endif
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputquestiontitle3" class="col-sm-3 col-form-label">Change
+                                        Title</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="title" class="form-control" id="inputquestiontitle3"
+                                            value="{{ $question->title }}" />
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputimage3" class="col-sm-3 col-form-label">Change Image:</label>
+                                    <div class="col-sm-9">
+                                        <img src="{{ asset('questions12/images') . '/' . $question->image }}"
+                                            class="img-thumbnail" style="width: 100px;height:100px">
+                                        <input type="file" accept="image/*" name="image" class="form-control"
+                                            id="inputimage3" />
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputDescription3" class="col-sm-3 col-form-label"> Change
+                                        Description</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" name="description" class="form-control" id="inputDescription3"
+                                            value="{{ $question->description }}">
+                                    </div>
+                                </div>
+                                <fieldset class="row mb-3">
+
+                                    <legend class="col-form-label col-sm-3 pt-0">Answers</legend>
+                                    <div class="col-sm-9">
+                                        @php
+                                            $i = 1;
+                                        @endphp
+                                        @forelse ($question->answers as $answer)
+                                            @if ($answer->question_id == $question->id)
+                                                @if ($answer->correct == '1')
+                                                    <div class="form-check">
+                                                        <input type="text" placeholder="answer []"
+                                                            name="answer[{{ $i }}]"
+                                                            value=" {{ $answer->answer }}">
+                                                        <input class="form-check-input" type="radio" name="answers"
+                                                            checked value="{{ $i }}">
+                                                    </div>
+                                                @else
+                                                    <div class="form-check">
+                                                        <input type="text" placeholder="answer"
+                                                            name="answer[{{ $i }}]"
+                                                            value=" {{ $answer->answer }}">
+                                                        <input class="form-check-input" type="radio" name="answers"
+                                                            value="{{ $i }}">
+                                                    </div>
+                                                @endif
+                                            @endif
+                                            @php
+                                                ++$i;
+                                            @endphp
+                                        @empty
+                                            <fieldset class="row mb-3">
+                                                <div class="col-sm-10">
+                                                    <div class="form-check">
+                                                        <input type="text" placeholder="answer 1" name="answer[1]">
+                                                        <input class="form-check-input" type="radio" name="answers"
+                                                            value="1">
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="text" placeholder="answer 2" name="answer[2]">
+                                                        <input class="form-check-input" type="radio" name="answers"
+                                                            value="2">
+
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="text" placeholder="answer 3" name="answer[3]">
+                                                        <input class="form-check-input" type="radio" name="answers"
+                                                            value="3">
+
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="text" placeholder="answer 4" name="answer[4]">
+                                                        <input class="form-check-input" type="radio" name="answers"
+                                                            value="4">
+
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        @endforelse
+                                    </div>
+                                </fieldset>
+                                <input type="submit" class="btn btn-primary" value="Save changes">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
     </div>
+
+
+    {{-- <pre>{{ print_r($question->answers) }}</pre> --}}
+
 @endsection
+@push('script')
+    <script>
+        $(document).on('click', '.pagination a', function(e) {
+            e.preventDefault();
+            var url = $(this).attr("href");
+            console.log(url);
+            fetchData(url);
+        })
+
+        function fetchData(url) {
+            $.ajax({
+                url: url,
+                method: 'GET',
+                dataType: 'html',
+                success: function(response) {
+                    // console.log(response);
+                    $("#table_data").html(response);
+                }
+            })
+        }
+    </script>
+@endpush
