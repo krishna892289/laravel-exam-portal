@@ -16,20 +16,23 @@
                         <div class="col">
                             <h5 class="card-title">Candidate Name : {{ $test->user->name }}</h5>
 
-                            <div class="fw-bold">
-                                Questions :
-                                @php $question_ids = explode(',', $test->question_ids); @endphp
+                            <div>
+                                <b> Questions :</b>
+                                @php
+                                    $question_ids = explode(',', $test->question_ids);
+                                    $count = 1;
+                                @endphp
 
                                 @foreach ($question_ids as $question_id)
                                     @php $question = App\Models\Question::find($question_id); @endphp
 
-                                    <code>
-                                        {{ $question->title ?? 'NA' }},
-                                    </code>
+                                    <span>
+                                        <b>{{ $count++ }} . </b> {{ $question->title ?? 'NA' }},
+                                    </span>
                                 @endforeach
                             </div>
 
-                            <p>Start Date & Time : {{ $test->startdatetime }}</p>
+                            <b>Start Date & Time : {{ $test->startdatetime }}</b>
                         </div>
                         @php
                             $testendtime = Illuminate\Support\Carbon::make($test->startdatetime)->clone()->addHour(3);
