@@ -34,7 +34,9 @@ Te Student Panel :
 <img width="1180" height="260" alt="image" src="https://github.com/user-attachments/assets/f0895dcd-e006-4d0f-9991-ec9a1e665d0f" />
 <img width="1637" height="478" alt="image" src="https://github.com/user-attachments/assets/fd9ce3ea-6660-4700-8f3b-b1b21a5fd97a" />
 <img width="1902" height="854" alt="image" src="https://github.com/user-attachments/assets/5fd6c1c3-e3ef-4b8d-89b1-974fbbc0b146" />
-<img width="1017" height="528" alt="image" src="https://github.com/user-attachments/assets/0bb28c74-c0c0-4048-a95e-518095870e7d" />
+<img width="1918" height="823" alt="image" src="https://github.com/user-attachments/assets/5186accf-8f75-4465-be5f-055fe7b2815e" />
+<img width="1715" height="875" alt="image" src="https://github.com/user-attachments/assets/c6a1a840-6629-4008-b5f5-dc81545e426a" />
+
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 ## 📖 About The Project
