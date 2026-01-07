@@ -3,14 +3,19 @@ FROM richarvey/nginx-php-fpm:latest
 COPY . /var/www/html
 WORKDIR /var/www/html
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader
+# 1. Install dependencies with --no-scripts to prevent memory crashes
+RUN composer install --no-dev --optimize-autoloader --no-scripts
 
-# 1. Create the .env file from the example (Missing Step)
+# 2. Create the .env file (Fixes the "No such file" error)
 RUN cp .env.example .env
 
-# 2. Now generate the key
+# 3. Generate the application key
 RUN php artisan key:generate
 
-# Set permissions
+# 4. Manually run the optimization commands (since we skipped scripts)
+RUN php artisan config:cache
+RUN php artisan route:cache
+RUN php artisan view:cache
+
+# 5. Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
