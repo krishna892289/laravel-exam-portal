@@ -20,7 +20,7 @@ class TeacherController extends Controller
     public function view_tests(){
         $questions = Question::with('category')->get();
         $categories = Category::all();
-        $tests = AssignedTest::with('user')->get();
+        $tests = AssignedTest::with('user')->latest('id')->get();
         $students = User::where('role', '2')->get();
         // dd($tests);
         return view('teachers.view_tests', compact('tests','categories', 'questions', 'students'));
@@ -33,7 +33,7 @@ class TeacherController extends Controller
 
     public function view_questions(Request $request){
         $categories = Category::all();
-        $questions = Question::with('answers')->paginate(4);
+        $questions = Question::with('answers')->latest('id')->paginate(4);
         if($request->ajax()){
             return view('teachers.data', compact('questions', 'categories'));
         }

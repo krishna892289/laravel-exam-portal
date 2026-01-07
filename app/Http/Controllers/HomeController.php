@@ -105,7 +105,7 @@ class HomeController extends Controller
     }
     public function results(){
         if(Auth::user()->role == '2'){
-            $results =  Result::where('user_id', Auth::user()->id)->get();
+            $results =  Result::where('user_id', Auth::user()->id)->latest('id')->get();
         }else{
             $results = Result::all();
         }
